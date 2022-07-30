@@ -56,7 +56,7 @@ export default function Homepage() {
               </div>
 
               
-              <div className="cards" style={{ alignSelf: "flexEnd" }}>
+              <div className="cards card-reverse">
                 <div className="text-section">
                   <h2 className="feature-heading" >Responsibility to nature</h2>
                   <h3 className="feature-subheading" >Carbonara makes you responsible of your habits and routines and how positively or negatively they impact the environment</h3>

@@ -4,23 +4,21 @@ import { Text, Flex, Spacer, Link } from "@chakra-ui/react";
 export default function Header() {
   return (
     <>
-      
-        <Flex p={"0.5rem 10%"} align={"center"}>
-          
-          <Text className="logo-text" fontSize={"2.4rem"}>Carbonara</Text>
-          <Spacer />
-          <Link href="/need" textDecoration={"none"} color={"#000"} >
-            <Text className="navbar-text"mr={"8rem"}>Need</Text>
-          </Link>
-          <Link href="/Calculate" textDecoration={"none"} color={"#000"}>
-            <Text className="navbar-text"mr={"8rem"}>Calculate</Text>
-          </Link>
-          <Link href="/About" textDecoration={"none"} color={"#000"}>
-            <Text className="navbar-text"mr={"1rem"}>The Crew</Text>
-          </Link>
-            
-        </Flex>
-      
+
+      <Flex p={"3rem 10%"} align={"center"} position={"relative"}>
+
+        <Text className="logo-text" fontSize={"2.4rem"}>Carbonara</Text>
+        <Spacer />
+        <Link href="/need" textDecoration={"none"}  >
+          <Text className="navbar-text" mr={"8rem"} color={"#FFF"} fontSize={"1.4rem"}>Need</Text>
+        </Link>
+        <Link href="/Calculate" textDecoration={"none"} >
+          <Text className="navbar-text" mr={"8rem"} color={"#FFF"} fontSize={"1.4rem"}>Calculate</Text>
+        </Link>
+        <Link href="/About" textDecoration={"none"} >
+          <Text className="navbar-text" mr={"1rem"} color={"#FFF"} fontSize={"1.4rem"}>The Crew</Text>
+        </Link>
+      </Flex>
     </>
     // pls look at footer.jsx
   );
