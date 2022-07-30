@@ -60,5 +60,19 @@ html {
    padding: 20px;
 }
 .logo-text {
-  font-size: 
+  font-weight:700;
+}
+.navbar-text {
+  color:black;
+  transition:400ms;
+  border-bottom:1px solid transparent;
+}
+.navbar-text:hover {
+  color:green;
+  border-bottom:1px solid green;
+  
+}
+.small-width {
+  width:600px !important;
+  margin:auto !important;
 }

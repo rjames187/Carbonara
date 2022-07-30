@@ -10,13 +10,13 @@ export default function Header() {
           <Text className="logo-text" fontSize={"24px"}>Carbonara</Text>
           <Spacer />
           <Link href="/need" textDecoration={"none"} color={"#000"} >
-            <Text mr={"5rem"}>Need</Text>
+            <Text className="navbar-text"mr={"5rem"}>Need</Text>
           </Link>
           <Link href="/Calculate" textDecoration={"none"} color={"#000"}>
-            <Text mr={"5rem"}>Calculate</Text>
+            <Text className="navbar-text"mr={"5rem"}>Calculate</Text>
           </Link>
           <Link href="/About" textDecoration={"none"} color={"#000"}>
-            <Text mr={"0.6rem"}>The Crew</Text>
+            <Text className="navbar-text"mr={"0.6rem"}>The Crew</Text>
           </Link>
             
         </Flex>

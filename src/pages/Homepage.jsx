@@ -33,12 +33,9 @@ export default function Homepage() {
         </section>
 
         <section className="main-page-container">
-          <section className="page-container">
+          <section className="page-container small-width">
             <h1 style={{ color: "black" }} className="home-subtitle">Best in class features</h1>
-            <div className="page-text-container">
-              <h1 style={{ color: "black" }} className="home-subtitle">For a better world, know your carbon footprint and reduce it</h1>
-              <a className="home-button">Reduce now</a>
-            </div>
+           
             <div className="page-image-container" >
               <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/600x400.jpg"></img>
             </div>
