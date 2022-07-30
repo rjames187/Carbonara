@@ -8,7 +8,7 @@
 //   unit is the unit the parameter mentioned above should be in
 //   some emissions factor objects may have an additional value called aditUnit which signifies that there is an additional parameter
 
-export const EMISSIONS_FACTORS = {
+const EMISSIONS_FACTORS = {
   transport: [
     {
       name: "automobile",
@@ -102,3 +102,5 @@ export const EMISSIONS_FACTORS = {
     }
   ],
 }
+
+export default EMISSIONS_FACTORS;

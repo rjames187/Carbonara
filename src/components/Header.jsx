@@ -12,7 +12,7 @@ export default function Header() {
         <Link href="/need" textDecoration={"none"}  >
           <Text className="navbar-text" mr={"8rem"} color={"#FFF"} fontSize={"1.4rem"}>Need</Text>
         </Link>
-        <Link to="/calculate" textDecoration={"none"} >
+        <Link href="/calculate" textDecoration={"none"} >
           <Text className="navbar-text" mr={"8rem"} color={"#FFF"} fontSize={"1.4rem"}>Calculate</Text>
         </Link>
         <Link href="/about" textDecoration={"none"} >
