@@ -6,7 +6,6 @@ export default function Header() {
     <>
 
       <Flex p={"3rem 10%"} align={"center"} position={"relative"}>
-
         <Text className="logo-text" fontSize={"2.4rem"}>Carbonara</Text>
         <Spacer />
         <Link href="/need" textDecoration={"none"}  >

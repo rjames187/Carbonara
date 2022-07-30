@@ -110,6 +110,10 @@ html{
   width: 24rem;
   opacity:0.08;
 }
+.right-footer-position {
+  margin-bottom: 20%;
+  margin-left: 20%; 
+}
 .font-head{
     transform: rotate(90deg);
 }
@@ -194,4 +198,16 @@ html{
 .feature-font-holder{
   position: absolute;
   margin-top:40rem;
+}
+.footer {
+    position: relative;
+  margin-top: -180px;
+  height: 180px;
+
+}
+.user-input-dropdown {
+  background-color:black;
+  color:white;
+  border:none;
+  border-radius: .1px;
 }
