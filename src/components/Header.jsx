@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <>
       <Flex>
-        <Text>Carbonara</Text>
+        <Text className="logo-text">Carbonara</Text>
         <Spacer />
         <Link href="#" textDecoration={"none"}>
           <Text mr={"10px"}>Need</Text>
