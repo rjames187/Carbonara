@@ -5,17 +5,17 @@ export default function Header() {
   return (
     <>
       
-        <Flex p={"5px 10%"} textAlign={"center"}>
+        <Flex p={"5px 10%"} align={"center"}>
           
           <Text className="logo-text" fontSize={"24px"}>Carbonara</Text>
           <Spacer />
-          <Link href="#" textDecoration={"none"} color={"#000"} >
+          <Link href="/need" textDecoration={"none"} color={"#000"} >
             <Text mr={"5rem"}>Need</Text>
           </Link>
-          <Link href="#" textDecoration={"none"} color={"#000"}>
+          <Link href="/Calculate" textDecoration={"none"} color={"#000"}>
             <Text mr={"5rem"}>Calculate</Text>
           </Link>
-          <Link href="#" textDecoration={"none"} color={"#000"}>
+          <Link href="/About" textDecoration={"none"} color={"#000"}>
             <Text mr={"0.6rem"}>The Crew</Text>
           </Link>
             

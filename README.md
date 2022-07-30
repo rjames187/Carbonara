@@ -4,7 +4,7 @@
 
 [Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+Using the two in conjunction is one of the fastest and the best ways to build a web app.
 
 ### Getting Started
 - Hit run
