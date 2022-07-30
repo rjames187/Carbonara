@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './calculate.css';
 import EMISSIONS_FACTORS from '../model';
 import Header from '../components/Header';
@@ -17,14 +17,16 @@ export default function Calculate() {
   }
 
   const [trip, setTrip] = useState({
-    transport: [],
+    transport: [
+      { id: "fart", val: "placeholder" },
+    ],
     bed: [],
     fun: [],
   });
 
   const [inputVals, setInputVals] = useState({
     "rt-dist": 0,
-    "rt-dropdown": "bus",
+    "rt-dropdown": "automobile",
   });
 
   // for number inputs
@@ -49,9 +51,9 @@ export default function Calculate() {
     e.preventDefault();
     const efName = inputVals["rt-dropdown"];
     const efNum = getEf("transport", efName);
-    const co2e = inputVals["rt-dist"] * efNum;
-    const factor = { name: efName, carb: co2e };
-    let tCopy = trip;
+    const co2e = `${inputVals["rt-dist"] * efNum} kg CO2e`;
+    const factor = { id: efName, val: `${efName} ${co2e}` };
+    let tCopy = { ...trip };
     tCopy.transport.push(factor);
     setTrip(tCopy);
     console.log(trip);
@@ -77,8 +79,10 @@ export default function Calculate() {
               <button onClick={rtSubmit}>Add</button>
             </div>
             <ol className="ef-list">
-              {trip.transport.map()
-              }
+              {trip.transport.map((i) => {
+                console.log(i);
+                return (<li key={i.id}>{i.val}</li>);
+              })}
             </ol>
           </form>
         </section>
