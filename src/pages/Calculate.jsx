@@ -1,20 +1,20 @@
 import React from 'react';
-import EMISSIONS_FACTORS from '../../model'
+import './calculate.css';
+import EMISSIONS_FACTORS from '../../model';
 
-export default function Calculate () {
-  //current means of travel selected
-  const [curTrans, setCurTrans] = useState("automobile");
-  
+export default function Calculate() {
+
   return (
-    <div>
+    <div class="parent-div">
       <main>
-        <section>
+        <section class="input-section">
           <h1>Calculate your footprint</h1>
-          <div>
-            <div>
-              
+          <form>
+            <div class="input row">
             </div>
-          </div>
+            <div class="ef-list">
+            </div>
+          </form>
         </section>
         <section></section>
       </main>

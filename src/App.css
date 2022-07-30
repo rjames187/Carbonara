@@ -95,8 +95,8 @@ html{
   font-family:"Poppins", "sans-serif";
 }
 .navbar-text:hover {
-  color:green;
-  border-bottom:1px solid green;
+  color:#b1dd8c;
+  border-bottom:1px solid #b1dd8c;
   
 }
 .small-width {
@@ -161,6 +161,8 @@ html{
   aspect-ratio: 14/8;
   width: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 22;
 }
 .text-section{
   width:35rem;
@@ -186,4 +188,10 @@ html{
 }
 .card-reverse{
   align-self:flex-end;
+}
+.feature-font-big{
+}
+.feature-font-holder{
+  position: absolute;
+  margin-top:40rem;
 }

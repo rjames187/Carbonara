@@ -40,7 +40,11 @@ export default function Homepage() {
           <div></div>
         </section>
 
-        <section className="main-page-container">
+        <section className="main-page-container" style={{position: "relative"}}>
+          <div className="feature-font-holder">
+                    <h2 className="big-font feature-font-big">FEATURE</h2>
+        <h2 className="big-font feature-font-big">RICH</h2>
+            </div>
           <section className="page-container flex-column">
             <h1 style={{ color: "black", display: "block" }} className="home-subtitle">Best in class features</h1>
 
@@ -83,5 +87,6 @@ export default function Homepage() {
       </main>
       <Footer></Footer>
     </div>
+    
   );
 }

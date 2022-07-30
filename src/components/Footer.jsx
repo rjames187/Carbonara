@@ -4,7 +4,7 @@ import { Text, Flex, Spacer, Link } from "@chakra-ui/react";
 export default function Footer() {
   return (
     <>
-      <Flex>
+      <Flex flexDirection={"column"} justifyContent={"flex-start"} >
         <Text>Carbonara</Text>
         <Spacer />
         <Link href="#" textDecoration={"none"}>
