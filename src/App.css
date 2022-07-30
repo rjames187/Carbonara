@@ -1,5 +1,45 @@
-main {
-  text-align: center;
-  vertical-align: center;
-  line-height: 100vh
+* {
+  margin-left:0;
+  margin-right:0;
+  background-color: #e6e6e6; 
+}
+
+.main-page-container {
+  background-color: #e6e6e6; 
+  height:100vh;
+}
+.main-page-container2 {
+  background-color: #1a1a1a;
+  height:100vh;
+}
+
+.page-container {
+  width: 1000px;
+  margin:auto;
+}
+.home-title {
+  font-size: 3rem;
+}
+.home-button {
+  background-color:black;
+  color:white;
+  padding: 10px 50px 10px 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  transition: 300ms;
+}
+.home-button:hover {
+  background-color:transparent;
+  color:black;
+  cursor:pointer;
+}
+.page-text-container {
+  width:60%;
+  padding-top: 15%;
+  float:left;
+}
+.page-image-container {
+  float:right;
+  width:39%;
+  padding-top:15%;
 }

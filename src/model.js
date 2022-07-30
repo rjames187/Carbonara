@@ -9,96 +9,96 @@
 //   some emissions factor objects may have an additional value called aditUnit which signifies that there is an additional parameter
 
 export const EMISSIONS_FACTORS = {
-  transport : [
+  transport: [
     {
-      name : "automobile",
-      ef : 0.463,
-      unit : "km",
+      name: "automobile",
+      ef: 0.463,
+      unit: "km",
     },
     {
-      name : "bus",
-      ef : 0.1234,
-      unit : "km",
+      name: "bus",
+      ef: 0.1234,
+      unit: "km",
     }
   ],
-  bed : [
+  bed: [
     {
-      name : "Hotel",
-      ef : 17.98,
-      unit : "night",
-      aditUnit : "person"
+      name: "Hotel",
+      ef: 17.98,
+      unit: "night",
+      aditUnit: "person"
     },
     {
-      name : "Camping",
-      ef : 0.202,
-      unit : "USD"
+      name: "Camping",
+      ef: 0.202,
+      unit: "USD"
     }
   ],
-  fun : [
+  fun: [
     {
-      name : "Amusement Park",
-      ef : 0.166,
-      unit : "USD"
+      name: "Amusement Park",
+      ef: 0.166,
+      unit: "USD"
     },
     {
-      name : "Arcade",
-      ef : 0.166,
-      unit : "USD"
+      name: "Arcade",
+      ef: 0.166,
+      unit: "USD"
     },
     {
-      name : "Golf Course",
-      ef : 0.304,
-      unit : "USD"
+      name: "Golf Course",
+      ef: 0.304,
+      unit: "USD"
     },
     {
-      name : "Ski Resort",
-      ef : 0.304,
-      unit : "USD"
+      name: "Ski Resort",
+      ef: 0.304,
+      unit: "USD"
     },
     {
-      name : "Rec Center",
-      ef : 0.304,
-      unit : "USD"
+      name: "Rec Center",
+      ef: 0.304,
+      unit: "USD"
     },
     {
-      name : "Movies",
-      ef : 0.05,
-      unit : "USD"
+      name: "Movies",
+      ef: 0.05,
+      unit: "USD"
     },
     {
-      name : "Museum",
-      ef : 0.203,
-      unit : "USD"
+      name: "Museum",
+      ef: 0.203,
+      unit: "USD"
     },
     {
-      name : "Historical Site",
-      ef : 0.203,
-      unit : "USD"
+      name: "Historical Site",
+      ef: 0.203,
+      unit: "USD"
     },
     {
-      name : "Zoo",
-      ef : 0.203,
-      unit : "USD"
+      name: "Zoo",
+      ef: 0.203,
+      unit: "USD"
     },
     {
-      name : "Park",
-      ef : 0.203,
-      unit : "USD"
+      name: "Park",
+      ef: 0.203,
+      unit: "USD"
     },
     {
-      name : "Performance",
-      ef : 0.087,
-      unit : "USD"
+      name: "Performance",
+      ef: 0.087,
+      unit: "USD"
     },
     {
-      name : "Sightseeing",
-      ef : 0.295,
-      unit : "USD"
+      name: "Sightseeing",
+      ef: 0.295,
+      unit: "USD"
     },
     {
-      name : "Sports",
-      ef : 0.071,
-      unit : "USD"
+      name: "Sports",
+      ef: 0.071,
+      unit: "USD"
     }
   ],
 }

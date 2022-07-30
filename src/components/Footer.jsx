@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Text, Flex, Spacer, Link } from "@chakra-ui/react";
 
-export default function Header() {
+export default function Footer() {
   return (
     <>
       <Flex>
@@ -16,10 +16,8 @@ export default function Header() {
         <Link href="#" textDecoration={"none"}>
           <Text mr={"10px"}>The Crew</Text>
         </Link>
-        
 
       </Flex>
     </>
-    // pls look at footer.jsx
   );
 }
