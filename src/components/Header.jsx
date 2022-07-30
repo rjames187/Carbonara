@@ -4,7 +4,7 @@ import { Text, Flex, Spacer, Link } from "@chakra-ui/react";
 export default function Header() {
   return (
     <>
-      <Flex>
+      <Flex p={"10px 10%"}>
         <Text className="logo-text">Carbonara</Text>
         <Spacer />
         <Link href="#" textDecoration={"none"}>
