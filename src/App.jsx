@@ -7,10 +7,11 @@ import Homepage from "./pages/Homepage";
 
 function App() {
   return (
-    // <Routes>
-    //   <Route path="/" element={<Homepage />} />
-    // </Routes>
-    <Homepage/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <Homepage /> } />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
