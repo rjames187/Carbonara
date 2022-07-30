@@ -1,9 +1,10 @@
 * {
   margin-left:0;
   margin-right:0;
+}
+body {
   background-color: #e6e6e6; 
 }
-
 .main-page-container {
   background-color: #e6e6e6; 
   height:100vh;
@@ -20,17 +21,20 @@
 .home-title {
   font-size: 3rem;
 }
+.home-subtitle {
+  font-size: 2rem;
+  color:#e6e6e6; 
+  padding-top: 5%;
+}
 .home-button {
   background-color:black;
   color:white;
-  padding: 10px 50px 10px 50px;
-  border-radius: 5px;
-  border: 1px solid black;
-  transition: 300ms;
+  padding: 12px 60px 12px 60px;
+  border-radius: 3px;
+  transition: 400ms;
 }
 .home-button:hover {
-  background-color:transparent;
-  color:black;
+  background-color:#6a6c6c;
   cursor:pointer;
 }
 .page-text-container {
@@ -42,4 +46,12 @@
   float:right;
   width:39%;
   padding-top:15%;
+}
+#image-row {
+  margin:auto;
+  padding: 20px;
+  margin: 10px;
+}
+#image-row img{
+   padding: 20px;
 }
