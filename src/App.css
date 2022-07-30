@@ -29,6 +29,11 @@ html{
 .main-page-container2 {
   background-color: #1a1a1a;
   height:100vh;
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  overflow: hidden;
 }
 .page-container {
   width: 80%;
@@ -70,11 +75,14 @@ html{
 }
 #image-row {
   margin:auto;
-  padding: 20px;
-  margin: 10px;
+  padding: 2rem;
+  margin: 2rem;
+  margin-top:4rem;
+  display:flex;
+  width:120%;
 }
 #image-row img{
-   padding: 20px;
+   padding: 5rem;
 }
 .logo-text {
   font-weight:700;
@@ -96,10 +104,12 @@ html{
 .big-font{
   font-family: 'Playfair Display', "serif";
   font-size: 16rem;
-  transform: rotate(90deg);
   margin:0;
   width: 24rem;
   opacity:0.08;
+}
+.font-head{
+    transform: rotate(90deg);
 }
 .head-font-div{
   display: flex;
@@ -110,9 +120,21 @@ html{
 .home-page-div{
   position: relative;
 }
-.font-head-2{
-}
 .hero-image{
   width: 100%;
   margin-top:-25rem;
+}
+.font-white{
+  color:white;
+}
+.collection-images{
+  width: 20%;
+}
+.image-row-holder{
+  margin: 3rem 0;
+}
+.home-big-2{
+  bottom: -30rem;
+  margin-left:55rem;
+  font-size:19rem;
 }
