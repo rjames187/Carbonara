@@ -8,13 +8,13 @@ export default function Footer() {
         <Text>Carbonara</Text>
         <Spacer />
         <Link href="#" textDecoration={"none"}>
-          <Text mr={"10px"}>Need</Text>
+          <Text mr={"1rem"}>Need</Text>
         </Link>
         <Link href="#" textDecoration={"none"}>
-          <Text mr={"10px"}>Calculate</Text>
+          <Text mr={"1rem"}>Calculate</Text>
         </Link>
         <Link href="#" textDecoration={"none"}>
-          <Text mr={"10px"}>The Crew</Text>
+          <Text mr={"1rem"}>The Crew</Text>
         </Link>
 
       </Flex>

@@ -4,17 +4,23 @@ import Footer from '../components/Footer';
 
 export default function Homepage() {
   return (
-    <div>
+    <div className="home-page-div">
+      <div className="head-font-div">
+        <h2 className="big-font font-head-1">HEALTH</h2>
+        <h2 className="big-font font-head-2">PURITY</h2>
+        <h2 className="big-font font-head-3">NATURE</h2>
+      </div>
       <Header></Header>
       <main>
         <section className="main-page-container">
           <section className="page-container">
+
             <div className="page-text-container">
               <h1 className="home-title">For a better world, know your carbon footprint and reduce it</h1>
               <a className="home-button">Reduce now</a>
             </div>
             <div className="page-image-container">
-              <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/600x400.jpg"></img>
+              <img className="hero-image" src="src/images/homePage.jpg"></img>
             </div>
           </section>
         </section>
@@ -24,10 +30,11 @@ export default function Homepage() {
             <h1 className="home-subtitle">For a future we imagine</h1>
           </section>
           <div className="image-row" id="image-row">
-            <img src="https://img.toolstud.io/300x240/3b5998/fff&text=+carbonera+placeholder+"></img>
-            <img src="https://img.toolstud.io/300x240/3b5998/fff&text=+carbonera+placeholder+"></img>
-            <img src="https://img.toolstud.io/300x240/3b5998/fff&text=+carbonera+placeholder+"></img>
-            <img src="https://img.toolstud.io/300x240/3b5998/fff&text=+carbonera+placeholder+"></img>
+            <img src="src/images/homePage.jpg"></img>
+            <img src="src/images/homePage.jpg"></img>
+            <img src="src/images/homePage.jpg"></img>
+            <img src="src/images/homePage.jpg"></img>
+            <img src="src/images/homePage.jpg"></img>
           </div>
           <div></div>
         </section>
@@ -35,7 +42,7 @@ export default function Homepage() {
         <section className="main-page-container">
           <section className="page-container small-width">
             <h1 style={{ color: "black" }} className="home-subtitle">Best in class features</h1>
-           
+
             <div className="page-image-container" >
               <img src="https://www.calliaweb.co.uk/wp-content/uploads/2015/10/600x400.jpg"></img>
             </div>

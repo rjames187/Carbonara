@@ -5,18 +5,18 @@ export default function Header() {
   return (
     <>
       
-        <Flex p={"5px 10%"} align={"center"}>
+        <Flex p={"0.5rem 10%"} align={"center"}>
           
-          <Text className="logo-text" fontSize={"24px"}>Carbonara</Text>
+          <Text className="logo-text" fontSize={"2.4rem"}>Carbonara</Text>
           <Spacer />
           <Link href="/need" textDecoration={"none"} color={"#000"} >
-            <Text className="navbar-text"mr={"5rem"}>Need</Text>
+            <Text className="navbar-text"mr={"8rem"}>Need</Text>
           </Link>
           <Link href="/Calculate" textDecoration={"none"} color={"#000"}>
-            <Text className="navbar-text"mr={"5rem"}>Calculate</Text>
+            <Text className="navbar-text"mr={"8rem"}>Calculate</Text>
           </Link>
           <Link href="/About" textDecoration={"none"} color={"#000"}>
-            <Text className="navbar-text"mr={"0.6rem"}>The Crew</Text>
+            <Text className="navbar-text"mr={"1rem"}>The Crew</Text>
           </Link>
             
         </Flex>

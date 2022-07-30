@@ -3,11 +3,24 @@
 * {
   margin-left:0;
   margin-right:0;
-  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', "serif";
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
 }
 body,
 html {
   background-color: #e6e6e6;
+}
+
+html{
+    box-sizing: border-box;
+/*     1rem =10px , 10px/16px = 62.5% */
+    font-size: 62.5%;
 }
 .main-page-container {
   background-color: #e6e6e6; 
@@ -17,25 +30,30 @@ html {
   background-color: #1a1a1a;
   height:100vh;
 }
-
 .page-container {
-  width: 1000px;
+  width: 80%;
   margin:auto;
+  display:flex;
 }
 .home-title {
-  font-size: 3rem;
+  font-size:4rem;
+  margin-bottom:5rem;
+  width: 70%;
 }
 .home-subtitle {
-  font-size: 2rem;
+  font-size: 3.2rem;
   color:#e6e6e6; 
   padding-top: 5%;
 }
 .home-button {
   background-color:black;
   color:white;
-  padding: 12px 60px 12px 60px;
-  border-radius: 3px;
+  padding: 1rem 5rem;
+  border-radius: 0;
   transition: 400ms;
+  font-family:"Poppins", "sans-serif";
+  font-weight: 500;
+  font-size:1.5rem;
 }
 .home-button:hover {
   background-color:#6a6c6c;
@@ -44,10 +62,9 @@ html {
 .page-text-container {
   width:60%;
   padding-top: 15%;
-  float:left;
+  position: relative;
 }
 .page-image-container {
-  float:right;
   width:39%;
   padding-top:15%;
 }
@@ -75,4 +92,27 @@ html {
 .small-width {
   width:600px !important;
   margin:auto !important;
+}
+.big-font{
+  font-family: 'Playfair Display', "serif";
+  font-size: 16rem;
+  transform: rotate(90deg);
+  margin:0;
+  width: 24rem;
+  opacity:0.08;
+}
+.head-font-div{
+  display: flex;
+  width: 80rem;
+  position: absolute;
+  height: fit-content;
+}
+.home-page-div{
+  position: relative;
+}
+.font-head-2{
+}
+.hero-image{
+  width: 100%;
+  margin-top:-25rem;
 }
