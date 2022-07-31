@@ -73,7 +73,6 @@ html{
 }
 .page-image-container {
   width:39%;
-  padding-top:15%;
 }
 #image-row {
   margin:auto;
@@ -128,7 +127,7 @@ html{
 }
 .hero-image{
   width: 100%;
-  margin-top:-30rem;
+  margin-top:-15rem;
   margin-left: 7rem;
 }
 .font-white{
@@ -193,16 +192,14 @@ html{
 .card-reverse{
   align-self:flex-end;
 }
-.feature-font-big{
-}
 .feature-font-holder{
   position: absolute;
   margin-top:40rem;
 }
 .footer {
     position: relative;
-  margin-top: -180px;
-  height: 180px;
+  margin-top: -18rem;
+  height: 18rem;
 
 }
 .user-input-dropdown {
@@ -212,17 +209,18 @@ html{
   border-radius: .1px;
 }
 .about-card {
-  width: 250px;
-  height:250px;
+  width: 22.1rem;
+  height:22.1rem;
   background-color:black;
   color:#e6e6e6; 
   display:inline-block;
-  margin: 20px;
-  font-size: 26px;
+  margin: 2rem 0;
+  margin-right: 4rem;
+  font-size: 2.3rem;
   
 }
 .about-cards-section {
-  width: 700px;
+  width: 70rem;
 
    font-family: 'Playfair Display', "serif";
 
@@ -232,7 +230,7 @@ html{
 }
 .about-title {
  margin-top: 75%;
- margin-left: -6px;
+ margin-left: -0.6rem;
 }
 .about-image-section {
   float:right;
@@ -241,6 +239,18 @@ html{
 .about-image-section img {
   float:right;
   text-align:right;
-  width: 300px;
-  height:300px;
+  width: 30rem;
+  height:30rem;
+}
+.about-image{
+  margin-left:10rem;
+}
+.footer-big{
+}
+/*MOBILE FRIENDLY CSS*/
+
+@media only screen and (max-width: 680px) {
+  img {
+    display:none;
+  }
 }

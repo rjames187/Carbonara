@@ -5,6 +5,10 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -141,13 +145,30 @@ export default function Calculate() {
       ...prevState,
       total: sum,
     }));
-    console.log(totals);
+    // reset form inputs
+    e.target.reset();
   }
 
   //keeps big total updated
   useEffect(() => {
+    // set big total
     const sum = totals.transport + totals.bed + totals.fun;
     setBigTotal(sum)
+    // clear data
+    const clearedTrip = {
+      transport: [], bed: [], fun: [],
+    };
+    setTrip(clearedTrip);
+    const clearedInputVals = {
+      "rt-dist": 0,
+      "rt-dropdown": "automobile",
+      "bd-nights": 0,
+      "bd-people": 0,
+      "rec-dropdown": "Amusement Park",
+      "rec-usd": 0,
+    };
+    setInputVals(clearedInputVals);
+    console.log(inputVals);
   }, [totals]);
 
   return (
@@ -155,77 +176,107 @@ export default function Calculate() {
       <Header></Header>
       <main>
         <div className="page-container">
-        <section className="input-section">
-          <h1 className="calculate-title">Calculate your vacation footprint</h1>
-          <form onSubmit={bigSubmit} >
-            <h2>Road Travel</h2>
-            <div className="input-row">
-              <label className="subtitle-input" htmlFor="rt-dropdown">Vehicle selection</label>
-              <select className="user-input-dropdown" onChange={ddOnChange} id="rt-dropdown">
-                {EMISSIONS_FACTORS.transport.map(i =>
-                  <option key={i.name} value={i.name}>{i.name}</option>
-                )}
-              </select>
-              <label htmlFor="rt-dist">Distance (km)</label>
-              <input onChange={ivOnChange} id="rt-dist" />
-              <button onClick={rtSubmit}>Add</button>
-            </div>
-            <ol className="ef-list">
-              {trip.transport.map((i) => {
-                return (<li key={i.id}>{i.val}</li>);
-              })}
-            </ol>
-            <h2>A place to sleep</h2>
-            <h3>Hotel stay</h3>
-            <div className="input-row">
-              <label htmlFor="bd-nights"># of Nights</label>
-              <input onChange={ivOnChange} id="bd-nights" />
-              <label htmlFor="bd-people"># of People</label>
-              <input onChange={ivOnChange} id="bd-people" />
-              <button onClick={hotSubmit}>Add</button>
-            </div>
-            <ol className="ef-list">
-              {trip.bed.map((i) => {
-                return (<li key={i.id}>{i.val}</li>);
-              })}
-            </ol>
-            <h2>Recreational Activities</h2>
-            <div className="input-row">
-              <label className="subtitle-input" htmlFor="rec-dropdown">Activity selection</label>
-              <select className="user-input-dropdown" onChange={ddOnChange} id="rec-dropdown">
-                {EMISSIONS_FACTORS.fun.map(i =>
-                  <option key={i.name} value={i.name}>{i.name}</option>
-                )}
-              </select>
-              <label htmlFor="rec-usd">Expenses (USD)</label>
-              <input onChange={ivOnChange} id="rec-usd" />
-              <button onClick={recSubmit}>Add</button>
-            </div>
-            <ol className="ef-list">
-              {trip.fun.map((i) => {
-                return (<li key={i.id}>{i.val}</li>);
-              })}
-            </ol>
-            <button type="submit">Calculate total footprint</button>
-          </form>
-        </section>
-        <div className="page-image-container">
-              <img className="hero-image" src="src/images/homePage.jpg"></img>
-            </div>
+
+          { /* please dont delete this! <div data-aos-duration="1000"data-aos="fade-up" >TESTING SOMETHING</div>*/} 
+          <section className="input-section">
+            <h1 className="calculate-title">Calculate your vacation footprint</h1>
+
+            <form onSubmit={bigSubmit} >
+              <section class="calculate-input-card">
+                <h2>Road Travel</h2>
+                <div className="inputs-holder">
+                  <div class="input-block">
+                    <div className="input-row">
+                      <label className="subtitle-input" htmlFor="rt-dropdown">Vehicle selection</label>
+
+
+                      <select className="user-input-dropdown" onChange={ddOnChange} id="rt-dropdown">
+                        {EMISSIONS_FACTORS.transport.map(i =>
+                          <option key={i.name} value={i.name}>{i.name}</option>
+                        )}
+                      </select>
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <label className="subtitle-input" htmlFor="rt-dist">Distance (km)</label>
+                    <input onChange={ivOnChange} id="rt-dist" />
+                    <button onClick={rtSubmit}>Add</button>
+
+                    <ol className="ef-list">
+                      {trip.transport.map((i) => {
+                        return (<li key={i.id}>{i.val}</li>);
+                      })}
+                    </ol>
+                  </div>
+                </div>
+              </section>
+
+              <section class="calculate-input-card">
+                <h2>A place to sleep</h2>
+                  <div class="inputs-holder">
+                  <div class="input-block">
+
+                  <label className="subtitle-input" htmlFor="bd-nights"># of Nights</label>
+                  <input onChange={ivOnChange} id="bd-nights" />
+                  </div>
+                    <div class="input-block">
+                  <label className="subtitle-input" htmlFor="bd-people"># of People</label>
+                  <input onChange={ivOnChange} id="bd-people" />
+                  <button onClick={hotSubmit}>Add</button>
+                    </div>
+                <ol className="ef-list">
+                  {trip.bed.map((i) => {
+                    return (<li key={i.id}>{i.val}</li>);
+                  })}
+                </ol>
+                </div>
+              </section>
+              <section class="card-right-align extra-margin calculate-input-card">
+                <h2>Recreational Activities</h2>
+                <div className="input-row">
+                  <label className="subtitle-input" className="subtitle-input" htmlFor="rec-dropdown">Activity selection</label>
+                  <select className="user-input-dropdown" onChange={ddOnChange} id="rec-dropdown">
+                    {EMISSIONS_FACTORS.fun.map(i =>
+                      <option key={i.name} value={i.name}>{i.name}</option>
+                    )}
+                  </select>
+                  <label className="subtitle-input" htmlFor="rec-usd">Expenses (USD)</label>
+                  <input onChange={ivOnChange} id="rec-usd" />
+                  <button onClick={recSubmit}>Add</button>
+                </div>
+                <ol className="ef-list">
+                  {trip.fun.map((i) => {
+                    return (<li key={i.id}>{i.val}</li>);
+                  })}
+                </ol>
+              </section>
+              <a href="#show-results">
+              <button className="calculate-button" type="submit">Calculate total footprint</button></a>
+            </form>
+          </section>
+          <div className="page-image-container">
+            <img className="hero-image" src="src/images/homePage.jpg"></img>
           </div>
+        </div>
         <hr></hr>
-        <section>
-          <h2>Results</h2>
-          <p>Your vacation carbon footprint is {bigTotal} kg CO2e</p>
-          <p>It would take {bigTotal / 21} fully-grown trees to absorb that much CO2e in 1 year</p>
-          <div id="chart-container">
+        <section id="results-section">
+          <div class="results-data">
+            <h1>Your total emissions</h1>
+
+            <p>Your vacation carbon footprint is <span class="red-text"> {bigTotal} kg CO2</span></p>
+            <br></br>
+            <p>It would take <span class="green-text">{Math.round(bigTotal / 21)}</span> fully-grown trees to absorb that much CO2 in <span class="green-text">1 year</span></p>
+            {/*   <div id="chart-container">
             <Pie data={chartData} />
+          </div>*/}
           </div>
         </section>
 
 
       </main>
-      <Footer></Footer>
+      <div style={{ position: "relative" }}>
+        <Footer id="show-results"></Footer>
+      </div>
     </div>
   );
 }

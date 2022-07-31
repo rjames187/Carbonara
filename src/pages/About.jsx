@@ -9,7 +9,7 @@ export default function About() {
       <Header></Header>
       <main>
         <section className="display-flex main-page-container">
-          <div className="page-container">
+          <div className="page-container" style={{marginTop: "5rem"}}>
           <div class="about-cards-section">
             <div class="about-card">
               <h1 class="about-title">RORY</h1>
@@ -25,19 +25,15 @@ export default function About() {
             </div>
 
           </div>
-          <div style={{marginTop:"-4.5rem"}}className="page-image-container">
-            <img className="hero-image" src="src/images/aboutUs3x-100.jpg"></img>
+          <div className="page-image-container about-container">
+            <img className="hero-image about-image" src="src/images/aboutUs3x-100.jpg"></img>
           </div>
             </div>
-          {/* done, is there something else you need help in*/}
-          {/* how should i make the navbar text white for just this page?*/}
-          {/* I am making it white for every page cause black is not visible in the images, Okay sounds good*/} 
-          
+      
         </section>
 
 
       </main>
-      <Footer></Footer>
     </div>
 
   );
