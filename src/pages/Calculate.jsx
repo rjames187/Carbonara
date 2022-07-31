@@ -25,13 +25,13 @@ export default function Calculate() {
 
   const [trip, setTrip] = useState({
     transport: [
-      { id: "fart", val: "placeholder" },
+      { id: "fart", val: "placeholder", carb: 0 },
     ],
     bed: [
-      { id: 0, val: "placeholder" },
+      { id: 0, val: "placeholder", carb: 0 },
     ],
     fun: [
-      { id: 4, val: "placeholder" },
+      { id: 4, val: "placeholder", carb: 0 },
     ],
   });
 
@@ -43,6 +43,13 @@ export default function Calculate() {
     "rec-dropdown": "Amusement Park",
     "rec-usd": 0,
   });
+
+  const [totals, setTotals] = useState({
+    transport: 0,
+    bed: 0,
+    fun: 0,
+  });
+  const [bigTotal, setBigTotal] = useState(0);
 
   // for number inputs
   function ivOnChange(e) {
@@ -66,9 +73,10 @@ export default function Calculate() {
     e.preventDefault();
     const efName = inputVals["rt-dropdown"];
     const efNum = getEf("transport", efName);
-    const co2e = `${inputVals["rt-dist"] * efNum} kg CO2e`;
+    const carb = inputVals["rt-dist"] * efNum;
+    const co2e = `${carb} kg CO2e`;
     dom_ids += 1;
-    const factor = { id: dom_ids, val: `${efName} ${co2e}` };
+    const factor = { id: dom_ids, val: `${efName} ${co2e}`, carb: carb };
     pushEf("transport", { ...factor });
   }
 
@@ -77,9 +85,10 @@ export default function Calculate() {
     e.preventDefault();
     const efName = inputVals["rec-dropdown"];
     const efNum = getEf("fun", efName);
-    const co2e = `${inputVals["rec-usd"] * efNum} kg CO2e`;
+    const carb = inputVals["rec-usd"] * efNum;
+    const co2e = `${carb} kg CO2e`;
     dom_ids += 1;
-    const factor = { id: dom_ids, val: `${efName} ${co2e}` };
+    const factor = { id: dom_ids, val: `${efName} ${co2e}`, carb: carb };
     pushEf("fun", { ...factor });
   }
 
@@ -89,12 +98,40 @@ export default function Calculate() {
     const ppl = inputVals["bd-people"];
     const nts = inputVals["bd-nights"];
     const efNum = getEf("bed", "Hotel");
-    const co2e = `${efNum * nts * ppl} kg CO2e`;
+    const carb = efNum * nts * ppl;
+    const co2e = `${carb} kg CO2e`;
     dom_ids += 1;
-    const factor = { id: dom_ids, val: `Hotel stay ${co2e} kg CO2e` };
+    const factor = { id: dom_ids, val: `Hotel stay ${co2e} kg CO2e`, carb: carb };
     pushEf("bed", { ...factor });
 
   }
+
+  // submit for results and graphs
+  function bigSubmit(e) {
+    e.preventDefault();
+    // sum each individual category
+    for (const key of Object.keys(trip)) {
+      console.log(key);
+      const sum = trip[key].map((i) => i.carb).reduce((prev, cur) => prev + cur, 0);
+      setTotals(prevState => ({
+        ...prevState,
+        [key]: sum,
+      }));
+    }
+    // find total sum
+    const sum = totals.transport + totals.bed + totals.fun;
+    setTotals(prevState => ({
+      ...prevState,
+      total: sum,
+    }));
+    console.log(totals);
+  }
+
+  //keeps big total updated
+  useEffect(() => {
+    const sum = totals.transport + totals.bed + totals.fun;
+    setBigTotal(sum)
+  }, [totals]);
 
   return (
     <div className="parent-div">
@@ -102,7 +139,7 @@ export default function Calculate() {
       <main>
         <section className="input-section">
           <h1 className="calculate-title">Calculate your vacation footprint</h1>
-          <form>
+          <form onSubmit={bigSubmit} >
             <h2>Road Travel</h2>
             <div className="input-row">
               <label className="subtitle-input" htmlFor="rt-dropdown">Vehicle selection</label>
@@ -156,7 +193,11 @@ export default function Calculate() {
         </section>
         <hr></hr>
         <section>
+          <h2>Results</h2>
+          <p>Your vacation carbon footprint is {bigTotal} kg CO2e</p>
         </section>
+
+
       </main>
       <Footer></Footer>
     </div>
