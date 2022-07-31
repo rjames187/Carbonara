@@ -179,10 +179,12 @@ export default function Calculate() {
 
           { /* please dont delete this! <div data-aos-duration="1000"data-aos="fade-up" >TESTING SOMETHING</div>*/} 
           <section className="input-section">
-            <h1 className="calculate-title">Calculate your vacation footprint</h1>
+            <h1  data-aos="fade-right"data-aos-delay="50"
+    data-aos-duration="1000"className="calculate-title">Calculate your vacation Carbon Footprint</h1>
 
             <form onSubmit={bigSubmit} >
-              <section class="calculate-input-card">
+              <section data-aos="fade-left"data-aos-delay="150"
+    data-aos-duration="1000"class="calculate-input-card">
                 <h2>Road Travel</h2>
                 <div className="inputs-holder">
                   <div class="input-block">
@@ -211,7 +213,8 @@ export default function Calculate() {
                 </div>
               </section>
 
-              <section class="calculate-input-card">
+              <section data-aos="fade-right"data-aos-delay="250"
+    data-aos-duration="1000"class="calculate-input-card">
                 <h2>A place to sleep</h2>
                   <div class="inputs-holder">
                   <div class="input-block">
@@ -223,32 +226,40 @@ export default function Calculate() {
                   <label className="subtitle-input" htmlFor="bd-people"># of People</label>
                   <input onChange={ivOnChange} id="bd-people" />
                   <button onClick={hotSubmit}>Add</button>
-                    </div>
                 <ol className="ef-list">
                   {trip.bed.map((i) => {
                     return (<li key={i.id}>{i.val}</li>);
                   })}
                 </ol>
+                    </div>
                 </div>
               </section>
-              <section class="card-right-align extra-margin calculate-input-card">
+              <section data-aos="fade-left"data-aos-delay="150"
+    data-aos-duration="1000"class="calculate-input-card">
                 <h2>Recreational Activities</h2>
-                <div className="input-row">
+                <div className="inputs-holder">
+                  <div class="input-block">
                   <label className="subtitle-input" className="subtitle-input" htmlFor="rec-dropdown">Activity selection</label>
                   <select className="user-input-dropdown" onChange={ddOnChange} id="rec-dropdown">
                     {EMISSIONS_FACTORS.fun.map(i =>
                       <option key={i.name} value={i.name}>{i.name}</option>
                     )}
                   </select>
+                    <div/>
+                    <div class="input-block">
                   <label className="subtitle-input" htmlFor="rec-usd">Expenses (USD)</label>
                   <input onChange={ivOnChange} id="rec-usd" />
                   <button onClick={recSubmit}>Add</button>
                 </div>
+                
+                
                 <ol className="ef-list">
                   {trip.fun.map((i) => {
                     return (<li key={i.id}>{i.val}</li>);
                   })}
                 </ol>
+                    </div>
+                    </div>
               </section>
               <a href="#show-results">
               <button className="calculate-button" type="submit">Calculate total footprint</button></a>
@@ -261,11 +272,14 @@ export default function Calculate() {
         <hr></hr>
         <section id="results-section">
           <div class="results-data">
-            <h1>Your total emissions</h1>
+            <h1 data-aos="fade-down"data-aos-delay="0"
+    data-aos-duration="1000">Your total emissions</h1>
 
-            <p>Your vacation carbon footprint is <span class="red-text"> {bigTotal} kg CO2</span></p>
+            <p data-aos="fade-left"data-aos-delay="50"
+    data-aos-duration="1000">Your vacation carbon footprint is <span class="red-text"> {bigTotal} kg CO2</span></p>
             <br></br>
-            <p>It would take <span class="green-text">{Math.round(bigTotal / 21)}</span> fully-grown trees to absorb that much CO2 in <span class="green-text">1 year</span></p>
+            <p data-aos="fade-right"data-aos-delay="50"
+    data-aos-duration="1000">It would take <span class="green-text">{Math.round(bigTotal / 21)}</span> fully-grown trees to absorb that much CO2 in <span class="green-text">1 year</span></p>
             {/*   <div id="chart-container">
             <Pie data={chartData} />
           </div>*/}

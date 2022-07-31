@@ -153,7 +153,7 @@ export default function Homepage() {
             <h1 style={{ color: "black", display: "block" }} className="home-subtitle">Best in class features</h1>
 
             <div className="card-holder">
-              <div className="cards">
+              <div data-aos-duration="1000"data-aos="fade-right"data-aos-delay="200"className="cards">
                 <div className="feature-div">
                   <img className="feature-image" src="src/images/features1.jpg"></img>
                 </div>
@@ -164,7 +164,7 @@ export default function Homepage() {
               </div>
 
               
-              <div className="cards card-reverse">
+              <div data-aos-duration="1000"data-aos="fade-left"data-aos-delay="200"className="cards card-reverse">
                 <div className="text-section">
                   <h2 className="feature-heading" >Responsibility to nature</h2>
                   <h3 className="feature-subheading" >Carbonara makes you responsible of your habits and routines and how positively or negatively they impact the environment</h3>
@@ -174,7 +174,7 @@ export default function Homepage() {
                 </div>
               </div>
               
-              <div className="cards" >
+              <div data-aos-duration="1000"data-aos="fade-right"data-aos-delay="200"className="cards" >
                 <div className="feature-div">
                   <img className="feature-image" src="src/images/features3.jpg"></img>
                 </div>

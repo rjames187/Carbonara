@@ -11,16 +11,16 @@ export default function About() {
         <section className="display-flex main-page-container">
           <div className="page-container" style={{marginTop: "5rem"}}>
           <div class="about-cards-section">
-            <div class="about-card">
+            <div data-aos-duration="1000"data-aos="fade-right"data-aos-delay="200"class="about-card">
               <h1 class="about-title">RORY</h1>
             </div>
-            <div class="about-card">
+            <div data-aos-duration="1000"data-aos="fade-left"data-aos-delay="400"class="about-card">
               <h1 class="about-title">AVICHAL</h1>
             </div>
-            <div class="about-card">
+            <div data-aos-duration="1000"data-aos="fade-right"data-aos-delay="600"class="about-card">
               <h1 class="about-title">SIDDHARTH</h1>
             </div>
-            <div class="about-card">
+            <div data-aos-duration="1000"data-aos="fade-left"data-aos-delay="800"class="about-card">
               <h1 class="about-title">PRANITH</h1>
             </div>
 
@@ -34,6 +34,7 @@ export default function About() {
 
 
       </main>
+      <Footer></Footer>
     </div>
 
   );
