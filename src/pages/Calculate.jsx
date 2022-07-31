@@ -3,6 +3,11 @@ import './calculate.css';
 import EMISSIONS_FACTORS from '../model';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Pie } from 'react-chartjs-2';
+
+ChartJS.register(ArcElement, Tooltip, Legend);
+
 
 export default function Calculate() {
   var dom_ids = 1;
@@ -25,14 +30,26 @@ export default function Calculate() {
 
   const [trip, setTrip] = useState({
     transport: [
-      { id: "fart", val: "placeholder", carb: 0 },
+
     ],
     bed: [
-      { id: 0, val: "placeholder", carb: 0 },
+
     ],
     fun: [
-      { id: 4, val: "placeholder", carb: 0 },
+
     ],
+  });
+
+  const [chartData, setChartData] = useState({
+    labels: ["Transportation", "Hotels", "Recreation"],
+    datasets: [{
+      label: "CO2e emissions in kg",
+      data: [0, 0, 0],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'],
+    }],
   });
 
   const [inputVals, setInputVals] = useState({
@@ -195,6 +212,10 @@ export default function Calculate() {
         <section>
           <h2>Results</h2>
           <p>Your vacation carbon footprint is {bigTotal} kg CO2e</p>
+          <p>It would take {bigTotal / 21} fully-grown trees to absorb that much CO2e in 1 year</p>
+          <div id="chart-container">
+            <Pie data={chartData} />
+          </div>
         </section>
 
 
