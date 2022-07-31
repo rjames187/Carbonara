@@ -1,4 +1,6 @@
-
+*{
+  border-width: 0px !important;
+}
 .calculate-title {
   font-size: 3.7rem;
   margin-bottom: 5%;
@@ -64,6 +66,7 @@ label {
   font-size:1.5rem;
   border-radius: 0.2rem;
   margin-top: 5%;
+  margin-left: 0;
 }
 .calculate-button:hover {
   background-color:#6a6c6c;
@@ -115,20 +118,27 @@ box-shadow: 5px 5px 50px 6px #C9C9C9;
   margin:auto;
   background-color:#1a1a1a;
   color:white;
+  margin: 10rem 0;
+  height: 50vh
 }
 #results-section h1 {
-  font-size: 4.5rem;
-  padding-top: 1rem;
+  font-size: 4rem;
+  padding-top: 4rem;
   padding-right: 2rem;
   margin-bottom: 3rem;
+  text-align: center;
 }
 #results-section p {
    font-family:"Poppins", "sans-serif";
-  font-size: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+
 }
 .results-data {
   width: 50rem;
   margin:auto;
+  margin-top: auto; 
+  margin-bottom: auto;
   padding-top: 2rem;
   
 }
@@ -157,3 +167,21 @@ box-shadow: 5px 5px 50px 6px #C9C9C9;
 span {
   font-family:"Poppins", "sans-serif";
 }
+.ef-list{
+ background-color: black;
+ color: white;
+ padding: 2rem 3rem;
+  margin-top: 3rem;
+  width: 40rem;
+}
+.ef-list li{
+    font-family: "poppins", "sans-serif";
+    font-weight: 500;
+    margin: 1rem auto;
+    margin-left: 2rem;
+}
+
+#ml-0 {
+  margin-left: 0px;
+}
+
