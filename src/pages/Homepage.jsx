@@ -85,8 +85,10 @@ export default function Homepage() {
 
 
       </main>
+      <div style={{position:"relative"}}>
+        <h2 className="big-font feature-font-big">CONTACT</h2>
       <Footer></Footer>
+      </div>
     </div>
-    
   );
 }

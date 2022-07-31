@@ -17,3 +17,22 @@
 .navbar-text {
   color:black !important;
 }
+
+#chart-container {
+  width: 300px;
+  height: 300px;
+}
+input{
+  background-color: black;
+  color:white;
+  border-radius:0;
+  border:0;
+  padding: 1rem 2rem;
+  width: 15rem;
+}
+select{
+  padding: 1rem 2rem;
+}
+option{
+  border-radius:0
+}

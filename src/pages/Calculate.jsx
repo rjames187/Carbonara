@@ -154,6 +154,7 @@ export default function Calculate() {
     <div className="parent-div">
       <Header></Header>
       <main>
+        <div className="page-container">
         <section className="input-section">
           <h1 className="calculate-title">Calculate your vacation footprint</h1>
           <form onSubmit={bigSubmit} >
@@ -208,6 +209,10 @@ export default function Calculate() {
             <button type="submit">Calculate total footprint</button>
           </form>
         </section>
+        <div className="page-image-container">
+              <img className="hero-image" src="src/images/homePage.jpg"></img>
+            </div>
+          </div>
         <hr></hr>
         <section>
           <h2>Results</h2>

@@ -211,3 +211,36 @@ html{
   border:none;
   border-radius: .1px;
 }
+.about-card {
+  width: 250px;
+  height:250px;
+  background-color:black;
+  color:#e6e6e6; 
+  display:inline-block;
+  margin: 20px;
+  font-size: 26px;
+  
+}
+.about-cards-section {
+  width: 700px;
+
+   font-family: 'Playfair Display', "serif";
+
+}
+.display-flex {
+  display:flex;
+}
+.about-title {
+ margin-top: 75%;
+ margin-left: -6px;
+}
+.about-image-section {
+  float:right;
+  
+}
+.about-image-section img {
+  float:right;
+  text-align:right;
+  width: 300px;
+  height:300px;
+}
