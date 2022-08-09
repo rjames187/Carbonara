@@ -3,14 +3,10 @@ import './calculate.css';
 import EMISSIONS_FACTORS from '../model';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
-
-ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 export default function Calculate() {
@@ -286,9 +282,6 @@ export default function Calculate() {
             <br></br>
             <p data-aos="fade-right" data-aos-delay="50"
               data-aos-duration="1000">It would take <span class="green-text">{Math.round(bigTotal / 21)}</span> fully-grown trees to absorb that much CO2 in <span class="green-text">1 year</span></p>
-            {/*   <div id="chart-container">
-            <Pie data={chartData} />
-          </div>*/}
           </div>
         </section>
 
