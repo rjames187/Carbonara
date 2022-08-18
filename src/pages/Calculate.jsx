@@ -106,7 +106,7 @@ export default function Calculate() {
     const carb = efNum * nts * ppl;
     const co2e = `${carb} kg CO2e`;
     dom_ids += 1;
-    const factor = { id: dom_ids, val: `Hotel stay ${co2e} kg CO2e`, carb: carb };
+    const factor = { id: dom_ids, val: `Hotel stay ${co2e}`, carb: carb };
     pushEf("bed", { ...factor });
 
   }
