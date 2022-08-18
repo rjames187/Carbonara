@@ -59,7 +59,7 @@ export default function Homepage() {
                 </div>
                 <div className="text-section">
                   <h2 className="feature-heading" >Visually appealing</h2>
-                  <h3 className="feature-subheading" >Carbonara not only just provide date but also represents it in a visual way through graphs which makes it easier to understand the data</h3>
+                  <h3 className="feature-subheading" >Carbonara not only provides data but displays it in a sleek interface. Carbonara records each activity you enter so that you don't lose track.</h3>
                 </div>
               </div>
 
