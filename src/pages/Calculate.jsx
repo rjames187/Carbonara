@@ -40,18 +40,6 @@ export default function Calculate() {
     ],
   });
 
-  const [chartData, setChartData] = useState({
-    labels: ["Transportation", "Hotels", "Recreation"],
-    datasets: [{
-      label: "CO2e emissions in kg",
-      data: [0, 0, 0],
-      backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'],
-    }],
-  });
-
   const [inputVals, setInputVals] = useState({
     "rt-dist": 0,
     "rt-dropdown": "automobile",
